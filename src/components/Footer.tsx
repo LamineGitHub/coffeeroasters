@@ -1,0 +1,26 @@
+import { Link, NavLink } from "react-router-dom";
+import { SocialMediaLink } from "./SocialMediaLink.tsx";
+
+export function Footer() {
+  return (
+    <footer
+      className="mx-6 mb-[72px] flex flex-col items-center justify-center gap-12 bg-secondary
+      py-[54px] md:mx-auto md:flex-row md:px-22 md:py-[47px] lg:mb-[88px]">
+      <div className="flex flex-col items-center gap-12 md:flex-row md:gap-8 lg:gap-[102px]">
+        <Link to="/">
+          <img src="/assets/shared/desktop/logo-footer.svg" width={237} height={27} alt="coffee roasters logo" />
+        </Link>
+        <nav>
+          <ul className="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-8">
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/about'>About Us</NavLink></li>
+            <li><NavLink to="/subscribe">Create your plan</NavLink></li>
+          </ul>
+        </nav>
+      </div>
+      <div className="flex items-center justify-center gap-6 md:ml-auto">
+        <SocialMediaLink />
+      </div>
+    </footer>
+  )
+}
