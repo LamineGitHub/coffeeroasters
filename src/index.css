@@ -31,6 +31,10 @@
     }
 
     p {
+        font-family: var(--font-barlow);
+        font-weight: 400;
+        font-size: clamp(0.938rem, 0.915rem + 0.094vw, 1rem);
+        line-height: clamp(1.563rem, 1.54rem + 0.094vw, 1.625rem);
         text-wrap: pretty;
     }
 }

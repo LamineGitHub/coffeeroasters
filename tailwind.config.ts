@@ -17,8 +17,12 @@ export default {
         'fraunces': 'var(--font-fraunces)',
         'barlow': 'var(--font-barlow)',
       },
+      backgroundImage: {
+        'home-desktop-hero-bg': "url('/assets/home/desktop/image-hero-coffeepress.jpg')",
+        'home-tablet-hero-bg': "url('/assets/home/tablet/image-hero-coffeepress.jpg')",
+        'home-mobile-hero-bg': "url('/assets/home/mobile/image-hero-coffeepress.jpg')",
+      },
       screens: {
-        'tablet': '768px',
         'desktop': '1440px',
       },
     },
