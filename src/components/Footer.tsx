@@ -1,5 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
-import { SocialMediaLink } from "./SocialMediaLink.tsx";
+import { Link, NavLink } from "react-router-dom"
+import { SocialMediaLink } from "./SocialMediaLink.tsx"
 
 export function Footer() {
   return (
@@ -12,8 +12,8 @@ export function Footer() {
         </Link>
         <nav>
           <ul className="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-8">
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/about'>About Us</NavLink></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About Us</NavLink></li>
             <li><NavLink to="/subscribe">Create your plan</NavLink></li>
           </ul>
         </nav>
