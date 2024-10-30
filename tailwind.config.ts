@@ -13,6 +13,9 @@ export default {
         light: 'var(--color-light)',
         neutral: 'var(--color-neutral)',
       },
+      spacing: {
+        22: '85px'
+      },
       fontFamily: {
         'fraunces': 'var(--font-fraunces)',
         'barlow': 'var(--font-barlow)',
@@ -21,6 +24,7 @@ export default {
         'home-desktop-hero-bg': "url('/assets/home/desktop/image-hero-coffeepress.jpg')",
         'home-tablet-hero-bg': "url('/assets/home/tablet/image-hero-coffeepress.jpg')",
         'home-mobile-hero-bg': "url('/assets/home/mobile/image-hero-coffeepress.jpg')",
+        'mobile-menu-gradient': 'linear-gradient(0deg, rgba(254, 252, 247, 0.5) 0%, rgba(254, 252, 247, 1) 60%)',
       },
       screens: {
         'desktop': '1440px',

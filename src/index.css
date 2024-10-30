@@ -37,4 +37,33 @@
         line-height: clamp(1.563rem, 1.54rem + 0.094vw, 1.625rem);
         text-wrap: pretty;
     }
+
+    #root {
+        max-width: 80rem;
+        margin-inline: auto;
+    }
+
+    header a,
+    footer a {
+        font-family: var(--font-barlow);
+        color: var(--color-neutral);
+        font-weight: 700;
+        font-size: 0.75rem;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    header a:hover,
+    header a.active {
+        color: var(--color-secondary);
+    }
+
+    footer a:hover,
+    footer a.active {
+        color: var(--color-light);
+    }
 }
+
+
