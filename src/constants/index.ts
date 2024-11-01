@@ -1,3 +1,19 @@
+export const navLinks = [
+  {
+    id: 1,
+    name: "Home",
+    href: "/",
+  }, {
+    id: 2,
+    name: "About",
+    href: "/about",
+  }, {
+    id: 3,
+    name: "Create your plan",
+    href: "/subscribe",
+  },
+]
+
 export const collections = [
   {
     id: 1,

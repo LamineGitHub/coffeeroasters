@@ -1,11 +1,10 @@
 import { useState } from "react"
 import clsx from "clsx"
-import { Link } from "./Link.tsx"
+import { NavLink } from "react-router-dom"
+import { navLinks } from "../constants"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-
-  const closeMenu = () => setIsOpen(false)
 
   return (
     <nav>
@@ -21,9 +20,16 @@ export function Navbar() {
           isOpen ? 'max-sm:opacity-100' : 'max-sm:pointer-events-none max-sm:invisible max-sm:opacity-0')}>
         <ul
           className="flex items-center justify-center gap-8 max-sm:min-h-[calc(100dvh-99px)] max-sm:flex-col max-sm:justify-start max-sm:bg-mobile-menu-gradient max-sm:pt-10">
-          <li><Link to="/" title="Home" onClick={closeMenu} /></li>
-          <li><Link to="/about" title="About Us" onClick={closeMenu} /></li>
-          <li><Link to="/subscribe" title="Create your plan" onClick={closeMenu} /></li>
+          {navLinks.map(({ id, href, name }) => (
+            <li key={id}>
+              <NavLink
+                to={href}
+                onClick={() => setIsOpen(false)}
+                className="max-sm:font-fraunces max-sm:text-2xl max-sm:leading-8 max-sm:text-secondary max-sm:hover:text-primary">
+                {name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
