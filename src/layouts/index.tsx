@@ -4,7 +4,7 @@ import { Header } from "@/components/Header.tsx"
 
 export function Layouts() {
   return (
-    <div>
+    <div className="mx-6">
       <Header />
       <main>
         <Outlet />

@@ -12,7 +12,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative mx-6 max-w-7xl overflow-hidden rounded-lg desktop:mx-auto">
+      className="relative max-w-7xl overflow-hidden rounded-lg desktop:mx-auto">
       {/*<div className="absolute inset-0 bg-black opacity-50"></div>*/}
       <div
         className={`${imageUrls.join(' ')} bg-cover bg-center`}>

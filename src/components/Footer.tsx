@@ -5,7 +5,7 @@ import { navLinks } from "@/constants"
 export function Footer() {
   return (
     <footer
-      className="mx-6 mb-[72px] flex flex-col items-center justify-center gap-12 bg-secondary
+      className="mb-[72px] flex flex-col items-center justify-center gap-12 bg-secondary
       py-[54px] md:flex-row md:px-22 md:py-[47px] lg:mb-[88px] desktop:mx-auto">
       <div className="flex flex-col items-center gap-12 md:flex-row md:gap-8 lg:gap-[102px]">
         <Link to="/">
