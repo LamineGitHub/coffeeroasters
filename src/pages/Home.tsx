@@ -1,5 +1,17 @@
+import { Hero } from "@/components/Hero.tsx"
+
 export function Home() {
+
   return (
-    <div>Home</div>
+    <>
+      <Hero />
+
+      <section>
+        <h2>Our Collections</h2>
+        <div>
+          
+        </div>
+      </section>
+    </>
   )
 }

@@ -1,5 +1,9 @@
+import { Hero } from "@/components/Hero.tsx"
+
 export function About() {
   return (
-    <div>About</div>
+    <>
+      <Hero />
+    </>
   )
 }

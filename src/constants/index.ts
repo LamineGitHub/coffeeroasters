@@ -14,6 +14,24 @@ export const navLinks = [
   },
 ]
 
+export const heroInfo = {
+  home: {
+    title: "Great coffee made simple.",
+    description: "Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.",
+    imageUrls: ['bg-home-mobile-hero', 'sm:bg-home-tablet-hero', 'lg:bg-home-desktop-hero'],
+  },
+  about: {
+    title: "About Us",
+    description: "Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee from around the world. We have since been dedicated to bring the perfect cup - from bean to brew - in every shipment.",
+    imageUrls: ['bg-about-mobile-hero', 'sm:bg-about-tablet-hero', 'lg:bg-about-desktop-hero'],
+  },
+  subscribe: {
+    title: "Create a plan",
+    description: "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.",
+    imageUrls: ['bg-plan-mobile-hero', 'sm:bg-plan-tablet-hero', 'lg:bg-plan-desktop-hero'],
+  },
+}
+
 export const collections = [
   {
     id: 1,

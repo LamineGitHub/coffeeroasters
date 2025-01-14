@@ -1,5 +1,9 @@
+import { Hero } from "@/components/Hero.tsx"
+
 export function Subscribe() {
   return (
-    <div>Subscribe</div>
+    <>
+      <Hero />
+    </>
   )
 }
