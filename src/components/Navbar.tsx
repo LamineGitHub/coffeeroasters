@@ -1,37 +1,62 @@
 import { useState } from "react"
-import clsx from "clsx"
 import { NavLink } from "react-router-dom"
+import { AnimatePresence, motion } from "motion/react"
 import { navLinks } from "@/constants"
+import { menuContainerVariants, menuItemsVariants, menuItemVariants } from "@/variants"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav>
+      {/* Bouton menu mobile */}
       <button
         className="block pt-1 outline-0 focus-visible:ring focus-visible:ring-primary focus-visible:ring-offset-2 sm:hidden"
-        onClick={() => setIsOpen(prevState => !prevState)}>
-        <img src={`/assets/shared/mobile/icon-${isOpen ? 'close' : 'hamburger'}.svg`} alt="" />
+        onClick={() => setIsOpen((prevState) => !prevState)}
+      >
+        <img src={`/assets/shared/mobile/icon-${isOpen ? "close" : "hamburger"}.svg`} alt="" />
       </button>
 
-      <div
-        className={clsx("max-sm:absolute max-sm:left-0 z-10 max-sm:top-[99px] max-sm:w-full" +
-          " max-sm:transition-all max-sm:duration-500",
-          isOpen ? 'max-sm:opacity-100' : 'max-sm:pointer-events-none max-sm:invisible max-sm:opacity-0')}>
-        <ul
-          className="flex items-center justify-center gap-8 max-sm:min-h-[calc(100dvh-99px)] max-sm:flex-col max-sm:justify-start max-sm:bg-mobile-menu-gradient max-sm:pt-10">
-          {navLinks.map(({ id, href, name }) => (
-            <li key={id}>
-              <NavLink
-                to={href}
-                onClick={() => setIsOpen(false)}
-                className="max-sm:font-fraunces max-sm:text-2xl max-sm:leading-8 max-sm:text-secondary max-sm:hover:text-primary">
-                {name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Navigation desktop */}
+      <ul className="hidden sm:flex sm:items-center sm:gap-8">
+        {navLinks.map(({ id, href, name }) => (
+          <li key={id}>
+            <NavLink to={href} className="hover:text-primary">
+              {name}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+
+      {/* Menu mobile avec animation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={menuContainerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="absolute left-0 top-24 z-10 w-full overflow-hidden bg-mobile-menu-gradient sm:hidden"
+          >
+            <motion.ul
+              variants={menuItemsVariants}
+              className="flex min-h-full flex-col items-center justify-start gap-8 pt-10"
+            >
+              {navLinks.map(({ id, href, name }) => (
+                <motion.li key={id} variants={menuItemVariants}>
+                  <NavLink
+                    to={href}
+                    onClick={() => setIsOpen(false)}
+                    className="font-fraunces text-2xl leading-8 text-secondary hover:text-primary"
+                  >
+                    {name}
+                  </NavLink>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }

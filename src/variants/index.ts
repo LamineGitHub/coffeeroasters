@@ -56,3 +56,50 @@ export const collectionItemVariants: Variants = {
   }
 }
 
+export const menuContainerVariants: Variants = {
+  hidden: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      when: "afterChildren"
+    }
+  },
+  visible: {
+    height: "calc(100dvh - 96px)",
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      duration: 0.3
+    }
+  }
+}
+
+export const menuItemsVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1
+    }
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.1
+    }
+  }
+}
+
+export const menuItemVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20
+  },
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+}
