@@ -2,10 +2,12 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom"
 import { AnimatePresence, motion } from "motion/react"
 import { navLinks } from "@/constants"
+import { useScrollLock } from "@/hooks/useScrollLock"
 import { menuContainerVariants, menuItemsVariants, menuItemVariants } from "@/variants"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  useScrollLock(isOpen)
 
   return (
     <nav>
